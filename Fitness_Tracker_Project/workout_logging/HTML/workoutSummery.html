@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Session Summary</title>
+  <link rel="stylesheet" href="../CSS/workoutSummery.css">
+</head>
+<body>
+  <div class="container">
+    <h3>Session Summary</h3>
+
+    <div class="summary">
+      <p><strong>Duration:</strong> <span id="duration">00:00</span></p>
+      <p><strong>Exercise:</strong> <span id="exerciseName">-</span></p>
+      <p><strong>Details:</strong> <span id="exerciseDetails">-</span></p>
+
+      <div class="notes-section">
+        <p><strong>Notes:</strong></p>
+        <p id="notes">-</p>
+      </div>
+
+      <button id="doneBtn">Done</button>
+    </div>
+  </div>
+
+  <script>
+    // Load data from localStorage
+    document.addEventListener("DOMContentLoaded", function() {
+      document.getElementById("duration").textContent = localStorage.getItem("sessionDuration") || "00:00";
+      document.getElementById("exerciseName").textContent = localStorage.getItem("exerciseName") || "-";
+      document.getElementById("exerciseDetails").textContent = localStorage.getItem("exerciseDetails") || "-";
+      document.getElementById("notes").textContent = localStorage.getItem("sessionNotes") || "-";
+    });
+
+    // Done button redirect
+    document.getElementById("doneBtn").addEventListener("click", function() {
+      window.location.href = "../../dashboard/HTML/dashboard.html"; // Change destination as needed
+    });
+  </script>
+</body>
+</html>
