@@ -1,0 +1,44 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  padding: 20px;
+}
+
+.container {
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+
+.summary {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.summary p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.notes-section {
+  margin-top: 20px;
+}
+
+#doneBtn {
+  margin-top: 30px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#doneBtn:hover {
+  background-color: #0056b3;
+}
